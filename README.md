@@ -7,9 +7,15 @@
 // 创建一个network
 docker network create es
 
-// 启动ES
-ocker run -d --name elasticsearch --net es -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:7.8.1
+// 创建ES
+docker run -d --name elasticsearch --net es -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:7.8.1
 
-// 启动KIBANA
+// 创建KIBANA
 docker run -d --name kibana --net es -p 5601:5601 kibana:7.8.1
+
+// 启动
+docker start elasticsearch kibana
+
+// 停止
+docker stop elasticsearch kibana
 ```
