@@ -27,3 +27,8 @@
 4. 选择index pattern，如kibana_sample_data_ecommerce
 5. save layer，进入layer setting，可以调整颜色
 6. 左上角选择save
+
+# Setup KIBANA
+1. kibana用NodeJS编写
+2. kibana最好使用和ES相同的版本
+3. 查看kibana的状态，`http://localhost:5601/status`
